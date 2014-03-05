@@ -2,12 +2,16 @@
 nbproject
 manifest.mf
 build.xml
+.idea
+*.iml
 
 node_modules
+app/browser/third-party
 
 .project
 .settings
-.idea/*
+.idea
+*.iml
 
 # _public
 node_modules/*
@@ -15,9 +19,7 @@ npm-debug.log
 
 test/test-results.xml
 
-# Bower stuff.
-bower_components/
-
 # build stuff.
 dist
 dist/*
+_public

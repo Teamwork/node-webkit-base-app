@@ -1,0 +1,66 @@
+#desktop-notification { //notification <body>
+  .window-not-draggable();
+  .user-select(none);
+
+  font-family : Helvetica, Arial, sans-serif;
+  background-color: #31322E;
+  color: #C9D1D5;
+  margin: none;
+  padding: none;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+
+  .notifications {
+    .window-not-draggable();
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0px;
+    padding: 10px 10px 10px 10px;
+    width: 290px;
+
+    li {
+      display: none;
+      overflow: hidden;
+      margin: 0px;
+      cursor: pointer;
+    }
+
+    .icon {
+      img {
+        width: 30px;
+        float: left;
+      }
+    }
+
+    .title,
+    .description {
+      margin-left: 40px;
+      font-size: 12px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 13px;
+    }
+  }
+
+  .close-notification-icon {
+    border-radius: 3px;
+    text-align: center;
+    position: fixed;
+    right: 7px;
+    top: 4px;
+    font-size: 9px;
+    padding: 3px;
+    z-index: 10;
+    -webkit-app-region: no-drag;
+
+    &:hover {
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+  }
+}

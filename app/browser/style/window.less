@@ -1,0 +1,47 @@
+.window-actions {
+  .window-draggable();
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  background: @gray;
+  z-index: 2000;
+}
+
+.window-actions-inner {
+  .window-not-draggable();
+  .pull-right();
+
+  .platform-mac & {
+    .pull-left();
+  }
+}
+
+.window-action(@backgroundColor) {
+  .pull-left();
+  background: @backgroundColor;
+  border: 1px solid darken(@backgroundColor, 20%);
+  border-radius: 0;
+  cursor: pointer;
+
+  span {
+    .text-hide();
+  }
+}
+
+.window-minimize {
+  .window-action(@windowMinimizeBackgroundColor);
+}
+
+.window-maximize {
+  .window-action(@windowMaximizeBackgroundColor);
+}
+
+.window-restore {
+  .window-action(@windowRestoreBackgroundColor);
+}
+
+.window-close {
+  .window-action(@windowCloseBackgroundColor);
+}

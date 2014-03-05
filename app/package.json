@@ -1,0 +1,36 @@
+{
+  "author": "Adam Lynch <contact@adamlynch.ie>",
+  "name": "node-webkit-base-app",
+  "description": "Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Similar idea to [node-webkit-hipster-seed](https://github.com/Anonyfox/node-webkit-hipster-seed), but with different stuff.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/adam-lynch/node-webkit-base-app",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adam-lynch/node-webkit-base-app/issues"
+  },
+  "main": "index.html",
+  "node-main": "background/app.js",
+  "single-instance": true,
+  "chromium-args": "",
+  "dom_storage_quota": 1024,
+  "window": {
+    "//": "screen settings",
+    "title": "node-webkit-base-app",
+    "icon": "link.png",
+    "toolbar": false,
+    "frame": false,
+    "position": "center",
+    "width": 1024,
+    "height": 768,
+    "min_width": 1024,
+    "min_height": 768,
+    "resizable": true,
+    "always-on-top": false,
+    "fullscreen": false
+  },
+  "dependencies": {
+    "nedb": "~0.9.4",
+    "node-notifier": "1.2.1"
+  }
+}

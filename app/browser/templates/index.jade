@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width', initial-scale='1.0')
+        meta(name='description', content='')
+        meta(name='author', content='')
+        title
+        link(rel='stylesheet', href='css/app.css')
+        script(src='js/partials.js')
+        style body { padding-top: 100px }
+    body
+        include partials/windowActions
+
+        .container
+            .starter-template
+                h1 Bootstrap starter template
+
+                #koExample
+                    input#search(data-bind="value: searchText, valueUpdate: 'afterkeydown'", type="text", placeholder="Search")
+                    p(data-bind="visible: loading") Loading data...
+                    ul(data-bind="foreach: messages")
+                        li
+                            span(data-bind="text: time + ' '", style="color:grey;")
+                            span(data-bind="text: author + ': ' + content")
+
+                p.lead
+                    | Use this document as a way to quickly start any new project.
+                    br
+                    | All you get is this text and a mostly barebones HTML document.
+
+
+                button(type="button", class="btn btn-default")
+                    span.glyphicon.glyphicon-star Star
+                button.btn.btn-primary#notification-trigger(type="button") Trigger Notification
+
+
+        script(src='js/third-party.js')
+        script(src='js/app.js')
