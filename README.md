@@ -18,6 +18,7 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 - jQuery 2
 - KnockoutJS
 - Jade templates
+- nedb for persistent storage
 - Lossless compression of images
 - Code style docs
 
