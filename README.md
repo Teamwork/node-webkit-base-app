@@ -26,6 +26,8 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 
 - Gulp task for generating documentation based on Biscotto CoffeeScript comments
 - Automated integration tests
+- Image conversion (to WebP)
+- SVG icons
 
 
 # Commands
