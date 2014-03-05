@@ -29,6 +29,10 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 
 # Commands
 
+## Global dependencies
+1. `npm install -g bower` and make sure it's on your path.
+2. `npm install -g gulp` and make sure it's on your path.
+
 ## Run
 
 1. `npm start`
@@ -36,15 +40,14 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 ## Build
 
 1. `npm install`
-2. `npm install -g bower`
-3. `bower install`
-4. `cd app`
-5. `npm install`
+2. `bower install`
+3. `cd app`
+4. `npm install`
 
 ## Other useful commands
 
 - `gulp clean` 
-- `gulp lint` Generates a nice coffeelint report
+- `gulp lint`. Generates a nice CoffeeLint report.
 - `gulp compile` (this is what `npm run compiler` calls)
 - `gulp compile-watch`. This first compiles everything, then watches for any changes in the LESS, Coffeescripts, etc. and re-compiles what has changed. If you want to run this, you should open a second terminal to run `npm run app` once the re-compilation has finished.
 
