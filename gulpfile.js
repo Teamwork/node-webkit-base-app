@@ -85,10 +85,18 @@ gulpGrunt(gulp, {
  * So we're using nequire for requiring node modules and require for broweserify modules.
  * This function replaces require with requireClient and nequire with require.
  */
-//not used right now... see https://github.com/gulpjs/gulp-util/issues/34
 var requireWorkaround = combinePipes()
     .pipe(replace, 'require', 'requireClient')
     .pipe(replace, 'nequire', 'require');
+
+var lintCoffeeWithThreshold = combinePipes()
+    .pipe(coffeelint, './coffeelint.json')
+    .pipe(coffeelint.reporter)
+    .pipe(coffeelintThreshold, -1, 0, function(numberOfWarnings, numberOfErrors){
+        gutil.beep();
+        throw new Error('CoffeeLint failure; see above. Warning count: ' + numberOfWarnings
+            + '. Error count: ' + numberOfErrors + '.');
+    });
 
 
 
@@ -147,13 +155,7 @@ gulp.task('compile-background', ['assets', 'background-scripts']);
 
 gulp.task('background-scripts', function(){
     gulp.src(paths.background.scripts)
-        .pipe(coffeelint('./coffeelint.json'))
-        .pipe(coffeelint.reporter())
-        .pipe(coffeelintThreshold(-1, 0, function(numberOfWarnings, numberOfErrors){
-            gutil.beep();
-            throw new Error('CoffeeLint failure; see above. Warning count: ' + numberOfWarnings
-                + '. Error count: ' + numberOfErrors + '.');
-        }))
+        .pipe(lintCoffeeWithThreshold())
         .pipe(coffee())
         .pipe(requireWorkaround())
         .pipe(gulp.dest(paths.public.backgroundScripts));
@@ -189,13 +191,7 @@ gulp.task('styles', function(){
 
 gulp.task('browser-scripts', function(){
     gulp.src(paths.browser.appScripts)
-        .pipe(coffeelint('./coffeelint.json'))
-        .pipe(coffeelint.reporter())
-        .pipe(coffeelintThreshold(-1, 0, function(numberOfWarnings, numberOfErrors){
-            gutil.beep();
-            throw new Error('CoffeeLint failure; see above. Warning count: ' + numberOfWarnings
-                + '. Error count: ' + numberOfErrors + '.');
-        }));
+        .pipe(lintCoffeeWithThreshold());
 
     gulp.src(paths.browser.appEntryScript, {read:false})
         .pipe(browserify({
