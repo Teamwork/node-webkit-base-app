@@ -29,7 +29,8 @@ var paths = {
     app: './app/',
     background: {},
     browser: {},
-    public: {}
+    public: {},
+    other: {}
 };
 
 // background
@@ -64,6 +65,9 @@ paths.public.backgroundRoot =  paths.public.root + 'background/';
 paths.public.backgroundScripts =  paths.public.backgroundRoot;
 paths.public.dependencies =  paths.public.root + 'node_modules';
 
+// other
+paths.other.coffeeRulesFile = './node_modules/teamwork-coffeelint-rules/coffeelint.json';
+
 
 
 /* ---------------------------------------------------------------------
@@ -90,7 +94,7 @@ var requireWorkaround = combinePipes()
     .pipe(replace, 'nequire', 'require');
 
 var lintCoffeeWithThreshold = combinePipes()
-    .pipe(coffeelint, './coffeelint.json')
+    .pipe(coffeelint, paths.other.coffeeRulesFile)
     .pipe(coffeelint.reporter)
     .pipe(coffeelintThreshold, -1, 0, function(numberOfWarnings, numberOfErrors){
         gutil.beep();
@@ -142,7 +146,7 @@ gulp.task('compile-watch', ['compile'], function(){
 gulp.task('lint', function(){
     // Generate a nice report of all lint errors
     gulp.src([paths.background.scripts, paths.browser.appScripts])
-        .pipe(coffeelint('./coffeelint.json'))
+        .pipe(coffeelint(paths.other.coffeeRulesFile))
         .pipe(coffeelint.reporter('default'))
 });
 
