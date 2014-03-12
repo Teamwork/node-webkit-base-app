@@ -37,6 +37,7 @@
 
 - No inline scripting.
 - Write everything in [CoffeeScript](http://coffeescript.org).
+- Try not to use abbreviations / shorthand in variable names and comments.
 - Variable names should be in camelCase.
 - Boolean variable names should start with `is`, e.g. `isHorizontal`.
 - Boolean variable names shouldn't be negative; i.e. `isShown = true` is better than `isHidden = false`.
@@ -44,7 +45,7 @@
     - There is only one parameter
     - It's semantic and obvious what `true` / `false` signifies without having to look at the function implementation.
 - If there are multiple parameters including a boolean or multiple, then use an object parameter so the booleans are named. Make sure to follow Biscotto's convention for describing object parameters.
-- Try not to use abbreviations / shorthand in variable names and comments.
+- Variables containing an `Array` should be named as the plural form of a noun; i.e. `books` not `bookCollection`.
 
 ## CoffeeScript
 
@@ -53,6 +54,7 @@
 - `nequire` is for requiring Node modules. `require` is used for requiring other CoffeeScripts (uses Browserify).
 - When defining a function, use the fat function arrow (`=>`) unless you definitely will be referencing a property from the context in which the function will be called. I.e. `$buttons.on 'click', () -> console.debug 'index of clicked element' + @.index`.
 - Don't use `@` on it's own, use `this` instead. Only use `@` when referring to properties (i.e. `@closeTab`).
+- `class` names should be singular nouns like `Notifier`.
 
 ## jQuery
 
