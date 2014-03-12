@@ -38,7 +38,12 @@
 - No inline scripting.
 - Write everything in [CoffeeScript](http://coffeescript.org).
 - Variable names should be in camelCase.
-- Boolean variable names should start with `is`, e.g. `isHorizontal`;
+- Boolean variable names should start with `is`, e.g. `isHorizontal`.
+- Boolean variable names shouldn't be negative; i.e. `isShown = true` is better than `isHidden = false`.
+- Functions can only have boolean parameters if:
+    - There is only one parameter
+    - It's semantic and obvious what `true` / `false` signifies without having to look at the function implementation.
+- If there are multiple parameters including a boolean or multiple, then use an object parameter so the booleans are named. Make sure to follow Biscotto's convention for describing object parameters.
 - Try not to use abbreviations / shorthand in variable names and comments.
 
 ## CoffeeScript
