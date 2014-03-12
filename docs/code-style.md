@@ -74,3 +74,7 @@
     .on('click', 'li', onNavItemClick)
     .on('click', 'a', onNavLinkClick)
     ```
+
+## Knockout
+- Keep as much logic out of the template as possible.
+- Don't use expressions in templates. Create a function instead. I.e. bad: `data-bind="show: something() === 4"`, good: `data-bind="show: somethingIsReady()"`.
