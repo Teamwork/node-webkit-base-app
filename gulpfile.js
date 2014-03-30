@@ -48,7 +48,7 @@ paths.browser.appEntryScript = paths.browser.appScriptsRoot + 'app.coffee';
 paths.browser.fonts =  paths.browser.root + 'fonts/*';
 paths.browser.images =  paths.browser.root + 'images/*';
 paths.browser.stylesRoot = paths.browser.root + 'style/';
-paths.browser.styles = paths.browser.stylesRoot + '*.less';
+paths.browser.styles = [paths.browser.stylesRoot + '*.less', paths.browser.stylesRoot + 'mixins/*.less'];
 paths.browser.styleEntryFile = paths.browser.stylesRoot + 'app.less';
 paths.browser.templatesRoot = paths.browser.root + 'templates/';
 paths.browser.templates = paths.browser.templatesRoot + '*.jade';
@@ -139,7 +139,7 @@ gulp.task('compile-watch', ['compile'], function(){
     gulp.watch([paths.browser.fonts], ['fonts']);
     gulp.watch([paths.browser.images], ['images']);
     gulp.watch([paths.browser.appScripts], ['browser-scripts']);
-    gulp.watch([paths.browser.styles], ['styles']);
+    gulp.watch(paths.browser.styles, ['styles']);
     gulp.watch([paths.browser.templates, paths.browser.templatePartials], ['templates']);
 });
 
