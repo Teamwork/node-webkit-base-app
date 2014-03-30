@@ -56,6 +56,7 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 
 # Notable files;
 
+- `.editorconfig`. See [editorconfig.org](http://editorconfig.org/).
 - `package.json`: Add any GulpJS dependencies here under devDependencies.
 - `bower.json`: Any browser-side dependencies.
 - `app/package.json`: [node-webkit manifest file](https://github.com/rogerwang/node-webkit/wiki/Manifest-format). List any node dependencies here needed in the end app (e.g. jQuery) and you can `nequire` them from your Coffescripts.
