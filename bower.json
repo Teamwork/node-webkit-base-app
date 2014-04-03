@@ -9,6 +9,12 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.1.0",
-    "knockout": "bowerjs/knockout#3.0.0"
+    "knockout": "bowerjs/knockout#3.0.0",
+    "mousetrap": "~1.4.6"
+  },
+  "overrides": {
+    "mousetrap": {
+      "main": "mousetrap.min.js"
+    }
   }
 }

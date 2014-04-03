@@ -3,14 +3,15 @@ class KoViewsManager
     views: {}
 
     register: (view) ->
-        el = $(view.el)[0]
-        @remove(el)
-        @views[el] = view
+        sel = view.el
+        el = $(sel)[0]
+        @remove(sel)
+        @views[sel] = view
         ko.applyBindings(view, el)
 
-    remove: (el) ->
-        if @views[el]
-            delete @views[el]
-            ko.cleanNode(el)
+    remove: (sel) ->
+        if @views[sel]
+            delete @views[sel]
+            ko.cleanNode($(sel)[0])
 
 module.exports = KoViewsManager

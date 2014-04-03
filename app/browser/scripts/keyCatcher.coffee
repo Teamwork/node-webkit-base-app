@@ -3,16 +3,15 @@ WindowHandler = require './windowHandler'
 class KeyCatcher
 
     constructor: (@window = global.app.windowHandler) ->
-        @attachEvents()
+        $ =>
+            @attachEvents()
 
     attachEvents: () =>
-        $ =>
-            $(document).on 'keyup', (e) =>
-                @onKeyUp()[e.keyCode](e) if @onKeyUp()[e.keyCode]?
+        for binding of @eventHandlers()
+            Mousetrap.bind binding, @eventHandlers()[binding]
 
-    onKeyUp: =>
-        27: () =>
+    eventHandlers: =>
+        'esc': (e) =>
             @window.showDevTools()
-
 
 module.exports = KeyCatcher
