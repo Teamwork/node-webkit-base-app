@@ -18,9 +18,9 @@ class KeyCatcher
                     @window.showDevTools()
             },
             {
-                keys: ['a b', 'c d'],
+                keys: ['ctrl+s', 'command+s'],
                 action: () =>
-                    alert('stuff')
+                    console.log 'Array of keys example'
             }
         ]
 
