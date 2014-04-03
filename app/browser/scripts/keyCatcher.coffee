@@ -7,7 +7,11 @@ class KeyCatcher
             @attachEvents()
 
     attachEvents: () =>
-        Mousetrap.bind 'esc', (e) =>
+        for binding of @eventHandlers()
+            Mousetrap.bind binding, @eventHandlers()[binding]
+
+    eventHandlers: =>
+        'esc': (e) =>
             @window.showDevTools()
 
 module.exports = KeyCatcher
