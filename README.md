@@ -36,16 +36,14 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 1. `npm install -g bower` and make sure it's on your path.
 2. `npm install -g gulp` and make sure it's on your path.
 
+## Build
+
+1. `npm run setup`
+2. `npm run compiler`
+
 ## Run
 
 1. `npm start`
-
-## Build
-
-1. `npm install`
-2. `bower install`
-3. `cd app`
-4. `npm install`
 
 ## Other useful commands
 

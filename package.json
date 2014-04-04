@@ -12,7 +12,8 @@
   "scripts": {
     "start": "nodewebkit _public",
     "compiler": "gulp compile",
-    "deploy": "gulp nodewebkit"
+    "deploy": "gulp nodewebkit",
+    "setup": "npm i && bower i && cd app && npm i && cd .."
   },
   "dependencies": {
     "grunt": "~0.4.2",
