@@ -50,7 +50,7 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 - `gulp clean` 
 - `gulp lint`. Generates a nice CoffeeLint report.
 - `gulp compile` (this is what `npm run compiler` calls)
-- `gulp compile-watch`. This first compiles everything, then watches for any changes in the LESS, Coffeescripts, etc. and re-compiles what has changed. If you want to run this, you should open a second terminal to run `npm run app` once the re-compilation has finished.
+- `gulp compile-watch`. This first compiles everything, then watches for any changes in the LESS, Coffeescripts, etc. and re-compiles what has changed. If you want to run this, you should open a second terminal to run `npm start` once the re-compilation has finished.
 
 # Notable files;
 
