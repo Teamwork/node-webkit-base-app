@@ -67,3 +67,7 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 
 - [Coding style guide](docs/code-style.md)
 - [Keyboard shortcuts](docs/keyboard-shortcuts.md)
+
+# Gotchas!!
+
+- gyp modules might not work on windows unless executable is named nw.exe https://github.com/rogerwang/node-webkit/issues/199
