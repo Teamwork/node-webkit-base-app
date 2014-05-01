@@ -46,6 +46,7 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 2. `bower install`
 3. `cd app`
 4. `npm install`
+5. `gulp`
 
 ## Other useful commands
 
@@ -54,7 +55,7 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 - `gulp compile` (this is what `npm run compiler` calls)
 - `gulp compile-watch`. This first compiles everything, then watches for any changes in the LESS, Coffeescripts, etc. and re-compiles what has changed. If you want to run this, you should open a second terminal to run `npm run app` once the re-compilation has finished.
 
-# Notable files;
+# Notable files
 
 - `.editorconfig`. See [editorconfig.org](http://editorconfig.org/).
 - `package.json`: Add any GulpJS dependencies here under devDependencies.
