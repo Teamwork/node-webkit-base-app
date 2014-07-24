@@ -52,7 +52,7 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 - `gulp compile` (this is what `npm run compiler` calls)
 - `gulp compile-watch`. This first compiles everything, then watches for any changes in the LESS, Coffeescripts, etc. and re-compiles what has changed. If you want to run this, you should open a second terminal to run `npm start` once the re-compilation has finished.
 
-# Notable files;
+# Notable files
 
 - `.editorconfig`. See [editorconfig.org](http://editorconfig.org/).
 - `package.json`: Add any GulpJS dependencies here under devDependencies.
@@ -65,3 +65,7 @@ Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Simi
 
 - [Coding style guide](docs/code-style.md)
 - [Keyboard shortcuts](docs/keyboard-shortcuts.md)
+
+# Gotchas!!
+
+- gyp modules might not work on windows unless executable is named nw.exe https://github.com/rogerwang/node-webkit/issues/199
