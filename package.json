@@ -1,7 +1,7 @@
 {
   "author": "Adam Lynch <contact@adamlynch.ie>",
   "name": "node-webkit-base-app",
-  "description": "Bootstrap your [node-webkit](https://github.com/rogerwang/node-webkit) app. Similar idea to [node-webkit-hipster-seed](https://github.com/Anonyfox/node-webkit-hipster-seed), but with different stuff.",
+  "description": "Bootstrap your node-webkit app. Similar idea to node-webkit-hipster-seed, but with different stuff.",
   "version": "0.0.1",
   "homepage": "https://github.com/adam-lynch/node-webkit-base-app",
   "private": true,
