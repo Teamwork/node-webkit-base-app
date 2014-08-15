@@ -19,7 +19,7 @@
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.11",
     "grunt-node-webkit-builder": "^0.1.21",
-    "nodewebkit": "~0.10.2"
+    "nodewebkit": "~0.8.6"
   },
   "devDependencies": {
     "bower": "~1.2.8",
